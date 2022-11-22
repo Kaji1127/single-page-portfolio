@@ -1,0 +1,19 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+.container {
+	max-width: 34.3rem;
+	width: 100%;
+
+	@include mq(md) {
+		max-width: 70.8rem;
+	}
+
+	@include mq(lg) {
+		max-width: 96rem;
+	}
+
+	@include mq(xl) {
+		max-width: 110rem;
+	}
+}

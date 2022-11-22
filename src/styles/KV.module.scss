@@ -1,0 +1,199 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+.kv {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	@include mq(md) {
+		text-align: left;
+		height: 60rem;
+		justify-content: flex-end;
+	}
+
+	@include mq(lg) {
+		position: relative;
+		height: 72rem;
+		justify-content: center;
+	}
+
+	&.container {
+		margin-bottom: 7.7rem;
+
+		@include mq(md) {
+			max-width: 70.8rem;
+			margin: 0 auto 6rem;
+		}
+
+		@include mq(lg) {
+			max-width: 96rem;
+			margin-bottom: 10.3rem;
+		}
+
+		@include mq(xl) {
+			max-width: 110rem;
+		}
+	}
+
+	& .rings {
+		width: 53rem;
+		height: 12.9rem;
+		position: absolute;
+		top: 12.4rem;
+		left: -50%;
+
+		@include mq(md) {
+			top: 8.6rem;
+			left: -35%;
+		}
+
+		@include mq(lg) {
+			top: 13.3rem;
+			left: -23%;
+		}
+	}
+
+	& .image {
+		position: relative;
+		overflow-x: hidden;
+		height: 38.3rem;
+		margin-bottom: 4.4rem;
+
+		@include mq(md) {
+			width: 32.2rem;
+			height: 60rem;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		@include mq(lg) {
+			width: 44.5rem;
+			height: 72rem;
+			overflow: visible;
+		}
+
+		& .profile-image {
+			width: 17.4rem;
+			height: 100%;
+			margin: 0 auto;
+
+			@include mq(md) {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		& .circle {
+			position: absolute;
+			right: -6.45rem;
+			bottom: 0;
+
+			@include mq(lg) {
+				left: -6.45rem;
+				right: auto;
+				bottom: 7rem;
+			}
+		}
+	}
+
+	& .text {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+		width: 34.3rem;
+		margin: 0 auto;
+		margin-bottom: 2.4rem;
+
+		@include mq(md) {
+			text-align: left;
+			width: 44.5rem;
+			margin: 0;
+			margin-bottom: 3.4rem;
+			gap: 0;
+		}
+
+		@include mq(lg) {
+			width: 70.6rem;
+			margin-top: 4.5rem;
+			margin-bottom: 6.6rem;
+		}
+
+		h2 {
+			font-size: 4rem;
+			line-height: 1;
+			color: var(--white);
+			letter-spacing: -0.114rem;
+
+			@include mq(md) {
+				font-size: 7.2rem;
+				letter-spacing: -0.205rem;
+				margin-bottom: 6rem;
+			}
+
+			@include mq(lg) {
+				font-size: 8rem;
+				letter-spacing: -0.25rem;
+				margin-bottom: 4.3rem;
+			}
+
+			@include mq(xl) {
+				font-size: 8.8rem;
+			}
+
+			& .nice {
+				@include mq(md) {
+					display: block;
+				}
+
+				@include mq(lg) {
+					display: inline;
+				}
+			}
+
+			& .name {
+				position: relative;
+				&::after {
+					content: '';
+					width: 100%;
+					height: 0.4rem;
+					background-color: var(--green);
+					position: absolute;
+					bottom: 0.2rem;
+					left: 0;
+					z-index: -1;
+
+					@include mq(lg) {
+						height: 0.6rem;
+						bottom: 0.4rem;
+					}
+				}
+			}
+		}
+
+		p {
+			font-weight: 500;
+			font-size: 1.6rem;
+			color: var(--gray);
+			line-height: 1.625;
+
+			@include mq(md) {
+				font-size: 1.8rem;
+				width: 44.5rem;
+			}
+		}
+	}
+
+	& .button {
+		text-align: center;
+
+		@include mq(md) {
+			text-align: left;
+			padding-bottom: 1rem;
+		}
+	}
+}

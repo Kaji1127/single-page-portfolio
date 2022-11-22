@@ -1,0 +1,88 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+.header {
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+
+	@include mq(md) {
+		top: 3rem;
+	}
+
+	@include mq(lg) {
+		top: 4rem;
+	}
+
+	& .content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 15.4rem;
+		margin: 0 auto;
+
+		@include mq(md) {
+			flex-direction: row;
+			gap: 0;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 2.4rem;
+		line-height: 1.33;
+		letter-spacing: -0.33px;
+		color: white;
+
+		@include mq(md) {
+			font-size: 3.2rem;
+		}
+	}
+
+	& .icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mq(md) {
+			gap: 3.2rem;
+		}
+
+		svg {
+			cursor: pointer;
+
+			path {
+				transition: fill 0.4s;
+			}
+
+			&:hover {
+				path {
+					fill: var(--green);
+				}
+			}
+		}
+
+		// &-github {
+		// 	width: 1.969rem;
+		// 	height: 1.92rem;
+		// }
+		// &-fem {
+		// 	width: 1.968rem;
+		// 	height: 1.76rem;
+		// }
+		// &-linkedin {
+		// 	width: 1.92rem;
+		// 	height: 1.92rem;
+		// }
+		// &-twitter {
+		// 	width: 1.862rem;
+		// 	height: 1.514rem;
+		// }
+	}
+}

@@ -1,0 +1,135 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+.projects {
+	margin: 0 auto;
+	margin-bottom: 8rem;
+
+	@include mq(md) {
+		margin-bottom: 10rem;
+	}
+
+	.title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4rem;
+
+		h2 {
+			font-size: 4rem;
+			line-height: 1;
+			color: var(--white);
+			letter-spacing: -0.114rem;
+
+			@include mq(md) {
+				font-size: 7.2rem;
+				letter-spacing: -0.205rem;
+			}
+
+			@include mq(lg) {
+				font-size: 8.8rem;
+				letter-spacing: -0.25rem;
+			}
+		}
+	}
+
+	.content {
+		display: grid;
+		row-gap: 4rem;
+
+		@include mq(md) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2.4rem;
+			row-gap: 6rem;
+		}
+
+		@include mq(lg) {
+			row-gap: 6.9rem;
+			column-gap: 3rem;
+		}
+
+		.project {
+			.image {
+				margin-bottom: 2rem;
+				position: relative;
+
+				&::before {
+					@include mq(lg) {
+						content: '';
+						position: absolute;
+						z-index: 1;
+						width: 100%;
+						height: 100%;
+						background-color: transparent;
+						transition: background-color 0.4s;
+						cursor: pointer;
+					}
+				}
+
+				&-buttons {
+					display: none;
+					z-index: 2;
+
+					@include mq(lg) {
+						display: flex;
+						flex-direction: column;
+						gap: 4.8rem;
+						align-items: center;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						opacity: 0;
+						transition: opacity 0.4s;
+					}
+				}
+
+				&:hover {
+					&::before {
+						background-color: var(--pale-black);
+					}
+
+					& .image-buttons {
+						opacity: 1;
+					}
+				}
+			}
+
+			.text {
+				margin-bottom: 2rem;
+
+				@include mq(lg) {
+					margin-bottom: 0;
+				}
+
+				h3 {
+					font-size: 2.4rem;
+					color: var(--white);
+					text-transform: uppercase;
+					line-height: 1.33;
+					margin-bottom: 0.7rem;
+				}
+
+				.skill {
+					display: flex;
+					gap: 1.8rem;
+
+					p {
+						font-size: 1.6rem;
+						color: var(--gray);
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		.buttons {
+			display: flex;
+			gap: 3rem;
+
+			@include mq(lg) {
+				display: none;
+			}
+		}
+	}
+}

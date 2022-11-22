@@ -1,0 +1,16 @@
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Space Grotesk';
+	background-color: var(--black);
+}
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--gray: hsl(0, 0%, 85%);
+	--dark-gray: hsl(0, 0%, 14%);
+	--black: hsl(0, 0%, 8%);
+	--pale-black: hsla(0, 0%, 8%, 0.7);
+	--green: hsl(153, 71%, 59%);
+}

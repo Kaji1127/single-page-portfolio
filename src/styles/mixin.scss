@@ -1,0 +1,6 @@
+@mixin mq($breakpoint) {
+	// @media（メディアクエリ）の中で変数を呼び出したい場合は #{}を使う
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
