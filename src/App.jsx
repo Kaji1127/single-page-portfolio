@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import Header from './components/Header';
 import KV from './components/KV';
@@ -7,18 +7,23 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 import './styles/App.scss';
-import Contact from './components/Contact';
 
 const App = () => {
+	const scrollRef = useRef(null);
+
+	const handleScroll = (ref) => {
+		ref.current.scrollIntoView({ behavior: 'smooth' });
+	};
+
 	return (
 		<>
 			<Header />
 			<main>
-				<KV />
+				<KV onScroll={handleScroll} scrollRef={scrollRef} />
 				<Skills />
-				<Projects />
+				<Projects onScroll={handleScroll} scrollRef={scrollRef} />
 			</main>
-			<Footer />
+			<Footer scrollRef={scrollRef} />
 		</>
 	);
 };

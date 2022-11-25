@@ -1,0 +1,106 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+.contact {
+	display: grid;
+	gap: 5rem;
+	width: 100%;
+	padding-bottom: 8.7rem;
+
+	@include mq(md) {
+		width: 44.5rem;
+		margin: 0 auto;
+		padding-bottom: 9.2rem;
+	}
+
+	@include mq(lg) {
+		width: 100%;
+		gap: 0;
+		grid-template-columns: repeat(2, 44.5rem);
+		justify-content: space-between;
+	}
+
+	& .text {
+		text-align: center;
+		letter-spacing: -0.114rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		@include mq(lg) {
+			text-align: left;
+			gap: 3.6rem;
+		}
+
+		& h2 {
+			font-size: 4rem;
+			color: var(--white);
+			line-height: 1;
+
+			@include mq(md) {
+				font-size: 7.2rem;
+			}
+			@include mq(lg) {
+				font-size: 8.8rem;
+			}
+		}
+
+		& p {
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: var(--gray);
+			line-height: 1.625;
+			letter-spacing: -0.01rem;
+
+			@include mq(md) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.form {
+		display: grid;
+		gap: 3.2rem;
+
+		&-input {
+			width: 100%;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid var(--white);
+			padding-bottom: 1.6rem;
+			padding-left: 1.6rem;
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: var(--white);
+			outline: none;
+
+			@include mq(md) {
+				font-size: 1.8rem;
+			}
+
+			&:focus {
+				border-bottom: 1px solid var(--green);
+			}
+			&.border-error {
+				border-bottom: 1px solid var(--error);
+			}
+		}
+
+		textarea {
+			height: 10.7rem;
+			padding-right: 1.6rem;
+		}
+
+		& div:last-child {
+			justify-self: end;
+		}
+
+		.error {
+			text-align: right;
+			font-size: 1.2rem;
+			font-weight: 500;
+			color: var(--error);
+			padding-top: 0.5rem;
+		}
+	}
+}

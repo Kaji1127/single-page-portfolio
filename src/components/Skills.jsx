@@ -4,13 +4,14 @@ import skillData from '../assets/data/skills.json';
 import RingsImage from '../assets/pattern-rings.svg';
 
 import styles from '../styles/Skills.module.scss';
+import Border from './Border';
 
 const Skills = () => {
 	return (
 		<section className={`${styles.skills}`}>
 			<img className={styles.rings} src={RingsImage} alt="rings" />
 			<div className={styles.container}>
-				<div className={styles.border} />
+				<Border />
 				<div className={styles.content}>
 					{skillData.map((skill) => (
 						<div key={skill.id} className={styles.skill}>
@@ -19,7 +20,7 @@ const Skills = () => {
 						</div>
 					))}
 				</div>
-				<div className={`${styles.border} ${styles['bottom-border']}`} />
+				<Border bottom="bottom" />
 			</div>
 		</section>
 	);

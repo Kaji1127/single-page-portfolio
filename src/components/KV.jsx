@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import Button from './Button';
 
@@ -10,7 +10,7 @@ import RingsImage from '../assets/pattern-rings.svg';
 
 import styles from '../styles/KV.module.scss';
 
-const KV = () => {
+const KV = ({ scrollRef, onScroll }) => {
 	return (
 		<section className={`${styles.kv} ${styles.container}`}>
 			<img className={styles.rings} src={RingsImage} alt="rings" />
@@ -36,7 +36,7 @@ const KV = () => {
 					accessible web apps that users love.
 				</p>
 			</div>
-			<Button />
+			<Button scrollRef={scrollRef} onScroll={onScroll} />
 		</section>
 	);
 };

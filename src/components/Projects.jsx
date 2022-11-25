@@ -5,12 +5,12 @@ import Button from './Button';
 
 import ProjectsData from '../assets/data/projects.json';
 
-const Projects = () => {
+const Projects = ({ scrollRef, onScroll }) => {
 	return (
 		<section className={`${styles.projects} container`}>
 			<div className={styles.title}>
 				<h2>Projects</h2>
-				<Button />
+				<Button scrollRef={scrollRef} onScroll={onScroll} />
 			</div>
 			<div className={styles.content}>
 				{ProjectsData.map((project) => (
@@ -24,8 +24,11 @@ const Projects = () => {
 								<img src={project.thumbnail.small} alt={project.title} />
 							</picture>
 							<div className={styles['image-buttons']}>
-								<Button text="view project" />
-								<Button text="view code" />
+								<Button text="view project" projectUrl={project.projectUrl} />
+								<Button
+									text="view code"
+									sourceCodeUrl={project.sourceCodeUrl}
+								/>
 							</div>
 						</div>
 						<div className={styles.text}>

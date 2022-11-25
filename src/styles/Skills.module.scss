@@ -56,12 +56,6 @@
 		background-color: var(--white);
 	}
 
-	.bottom-border {
-		@include mq(md) {
-			display: none;
-		}
-	}
-
 	.content {
 		text-align: center;
 		padding: 4rem 0;
