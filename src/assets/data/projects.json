@@ -6,8 +6,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-1-small.webp",
-			"large": "/src/assets/thumbnail-project-1-large.webp"
+			"small": "/public/projects/thumbnail-project-1-small.webp",
+			"large": "/public/projects/thumbnail-project-1-large.webp"
 		}
 	},
 	{
@@ -17,8 +17,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-2-small.webp",
-			"large": "/src/assets/thumbnail-project-2-large.webp"
+			"small": "/public/projects/thumbnail-project-2-small.webp",
+			"large": "/public/projects/thumbnail-project-2-large.webp"
 		}
 	},
 	{
@@ -28,8 +28,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-3-small.webp",
-			"large": "/src/assets/thumbnail-project-3-large.webp"
+			"small": "/public/projects/thumbnail-project-3-small.webp",
+			"large": "/public/projects/thumbnail-project-3-large.webp"
 		}
 	},
 	{
@@ -39,8 +39,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-4-small.webp",
-			"large": "/src/assets/thumbnail-project-4-large.webp"
+			"small": "/public/projects/thumbnail-project-4-small.webp",
+			"large": "/public/projects/thumbnail-project-4-large.webp"
 		}
 	},
 	{
@@ -50,8 +50,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/memory-game-vse4WFPvM",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-5-small.webp",
-			"large": "/src/assets/thumbnail-project-5-large.webp"
+			"small": "/public/projects/thumbnail-project-5-small.webp",
+			"large": "/public/projects/thumbnail-project-5-large.webp"
 		}
 	},
 	{
@@ -61,8 +61,8 @@
 		"projectUrl": "https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6",
 		"sourceCodeUrl": "https://www.frontendmentor.io/challenges",
 		"thumbnail": {
-			"small": "/src/assets/thumbnail-project-6-small.webp",
-			"large": "/src/assets/thumbnail-project-6-large.webp"
+			"small": "/public/projects/thumbnail-project-6-small.webp",
+			"large": "/public/projects/thumbnail-project-6-large.webp"
 		}
 	}
 ]
